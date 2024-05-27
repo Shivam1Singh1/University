@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './Video.css';
+import videoFile from '../../assets/video.mp4'; // Ensure the correct path to your video file
 
 const Video = ({ playState, setPlayState }) => {
     const player = useRef(null);
@@ -12,7 +13,7 @@ const Video = ({ playState, setPlayState }) => {
 
     return (
         <div className={`video-player ${playState ? '' : 'hide'}`} ref={player} onClick={closePlayer}>
-            <video src="src/assets/video.mp4" autoPlay muted controls></video>
+            <video src={videoFile} autoPlay muted controls></video>
         </div>
     );
 }

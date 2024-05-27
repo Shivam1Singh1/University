@@ -1,5 +1,10 @@
 import React from 'react';
 import './Contact.css';
+import msgIcon from '../../assets/msg-icon.png';
+import mailIcon from '../../assets/mail-icon.png';
+import phoneIcon from '../../assets/phone-icon.png';
+import locationIcon from '../../assets/location-icon.png';
+import whiteArrow from '../../assets/white-arrow.png';
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
@@ -31,7 +36,7 @@ const Contact = () => {
             <div className="contact-col">
                 <h3>
                     Send us a message
-                    <img src="src/assets/msg-icon.png" alt="" />
+                    <img src={msgIcon} alt="Message Icon" />
                 </h3>
                 <p>
                     Thank you for your support! Your feedback is crucial for our college's growth.
@@ -40,15 +45,15 @@ const Contact = () => {
                 </p>
                 <ul>
                     <li>
-                        <img src="src/assets/mail-icon.png" alt="" />
+                        <img src={mailIcon} alt="Mail Icon" />
                         Contact@shivamsingh16mar@gmail.com
                     </li>
                     <li>
-                        <img src="src/assets/phone-icon.png" alt="" />
+                        <img src={phoneIcon} alt="Phone Icon" />
                         +91 2917 2281
                     </li>
                     <li>
-                        <img src="src/assets/location-icon.png" alt="" />
+                        <img src={locationIcon} alt="Location Icon" />
                         15 Walton City, Miami<br />
                         01-425, United States
                     </li>
@@ -67,7 +72,7 @@ const Contact = () => {
 
                     <button type='submit' className='btn dark-btn'>
                         Submit now
-                        <img src="src/assets/white-arrow.png" alt="" />
+                        <img src={whiteArrow} alt="White Arrow" />
                     </button>
                 </form>
                 <span>{result}</span>

@@ -1,12 +1,14 @@
-import React from 'react'
-import './about.css'
+import React from 'react';
+import './about.css';
+import aboutImg from '../../assets/about.png';
+import playIcon from '../../assets/play-icon.png';
 
 const About = ({ setPlayState }) => {
     return (
         <div className='about'>
             <div className="about-left">
-                <img src="src\assets\about.png" alt="" className='about-img' />
-                <img src="src\assets\play-icon.png" alt="" className='play-icon' onClick={()=>{setPlayState(true)}}/>
+                <img src={aboutImg} alt="About" className='about-img' />
+                <img src={playIcon} alt="Play Icon" className='play-icon' onClick={() => { setPlayState(true) }} />
             </div>
             <div className="about-right">
                 <h3>ABOUT UNIVERSITY</h3>
@@ -16,7 +18,7 @@ const About = ({ setPlayState }) => {
                 <p>Through a vibrant community and endless opportunities, the college encourages students to pursue their passions and make meaningful contributions. Graduates leave confident, capable, and ready to make their mark on the world.</p>
             </div>
         </div>
-    )
+    );
 }
 
-export default About
+export default About;
